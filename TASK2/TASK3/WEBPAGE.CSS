@@ -1,0 +1,149 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    min-height: 500px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #bbb;
+}
+
+
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+
+
+.product-card {
+    background-color: white;
+
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+
+    width: 250px;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Buy Button */
+
+.buy-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: #555;
+}
+
+
+/* Normal Button */
+
+button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+
+/* Blog - 3 Columns */
+
+.blog-container {
+    display: flex;
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 15px;
+    flex: 1;
+}
+
+.blog-card a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* Details */
+
+.details {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 15px;
+}
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 600px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+    }
+
+    .blog-container {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: auto;
+        margin: 10px 0;
+    }
+}
