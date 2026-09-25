@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 6px;
+    font-size: 12px;
+}
+
+th {
+    font-weight: bold;
+}
+
+.green {
+    background-color: lime;
+}
+
+.yellow {
+    background-color: lightyellow;
+}
+
+.blue {
+    background-color: cyan;
+}
