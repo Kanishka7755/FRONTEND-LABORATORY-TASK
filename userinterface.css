@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navigation */
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+
+/* Navigation Hover Effect */
+
+.nav-link:hover {
+    color: #00bfff !important;
+    transform: translateY(-2px);
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 600px;
+    background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Hero Heading */
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+
+/* Rocket Animation */
+
+.rocket {
+    font-size: 120px;
+
+    animation-name: rocketMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Rocket Keyframes */
+
+@keyframes rocketMove {
+
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+
+}
+
+
+/* Astronaut */
+
+.astronaut {
+    font-size: 70px;
+
+    animation-name: astronautMove;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Astronaut Keyframes */
+
+@keyframes astronautMove {
+
+    0% {
+        transform: translateX(-30px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(30px) rotate(5deg);
+    }
+
+}
+
+
+/* About Section */
+
+.about {
+    background-color: #f5f5f5;
+}
+
+.about h2 {
+    font-weight: bold;
+}
+
+
+/* Features */
+
+.features {
+    background-color: white;
+}
+
+.feature-card {
+    height: 100%;
+    transition: 0.3s;
+}
+
+
+/* Card Hover */
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px gray;
+}
+
+
+/* Contact */
+
+.contact {
+    background-color: #090979;
+    color: white;
+}
+
+
+/* Buttons */
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .rocket {
+        font-size: 90px;
+        margin-top: 40px;
+    }
+
+    .astronaut {
+        font-size: 55px;
+    }
+
+}
