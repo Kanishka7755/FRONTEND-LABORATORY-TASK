@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.container {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+}
