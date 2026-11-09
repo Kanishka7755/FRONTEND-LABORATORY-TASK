@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Applications</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+    <h1>Interactive Applications</h1>
+
+    <div class="todo">
+        <h2>My To-Do List</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter your task">
+
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <div class="gallery">
+        <h2>Image Gallery</h2>
+
+        <img id="mainImage" src="https://picsum.photos/id/10/500/300">
+
+        <div class="thumbnails">
+
+            <img src="https://picsum.photos/id/10/100/70" onclick="changeImage(this)">
+
+            <img src="https://picsum.photos/id/20/100/70" onclick="changeImage(this)">
+
+            <img src="https://picsum.photos/id/30/100/70" onclick="changeImage(this)">
+
+            <img src="https://picsum.photos/id/40/100/70" onclick="changeImage(this)">
+
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+
+</body>
+
+</html>
