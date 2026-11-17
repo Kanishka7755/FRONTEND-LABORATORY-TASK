@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 8 - Advanced DOM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        input {
+            padding: 12px;
+            width: 60%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #6c63ff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #483dca;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e9e9ff;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 6px;
+        }
+
+        .task-text {
+            flex: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            justify-content: center;
+            margin: 20px auto;
+            border: 3px solid black;
+            width: fit-content;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Task 8: Advanced DOM Applications</h1>
+
+    <!-- TO DO LIST -->
+
+    <div class="container">
+
+        <h2>My To-Do List</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter your task">
+
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <!-- CHESSBOARD -->
+
+    <div class="container">
+
+        <h2>Dynamic Chessboard</h2>
+
+        <div id="chessboard" class="chessboard"></div>
+
+    </div>
+
+    <script>
+
+        // TO DO LIST FUNCTIONS
+
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+
+            let task = input.value.trim();
+
+            if (task === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            let li = document.createElement("li");
+
+            // Create checkbox
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            // Create task text
+            let span = document.createElement("span");
+            span.innerText = task;
+            span.className = "task-text";
+
+            // Mark task as completed
+            checkbox.addEventListener("change", function () {
+                span.classList.toggle("completed", checkbox.checked);
+            });
+
+            // Move Up Button
+            let upButton = document.createElement("button");
+            upButton.innerText = "UP";
+
+            upButton.onclick = function () {
+                let previous = li.previousElementSibling;
+
+                if (previous) {
+                    li.parentNode.insertBefore(li, previous);
+                }
+            };
+
+            // Move Down Button
+            let downButton = document.createElement("button");
+            downButton.innerText = "DOWN";
+
+            downButton.onclick = function () {
+                let next = li.nextElementSibling;
+
+                if (next) {
+                    li.parentNode.insertBefore(next, li);
+                }
+            };
+
+            // Add all elements to list item
+            li.appendChild(checkbox);
+            li.appendChild(span);
+            li.appendChild(upButton);
+            li.appendChild(downButton);
+
+            // Add task to list
+            document.getElementById("taskList").appendChild(li);
+
+            input.value = "";
+
+        }
+
+        // DYNAMIC CHESSBOARD
+
+        let board = document.getElementById("chessboard");
+
+        for (let row = 0; row < 8; row++) {
+
+            for (let col = 0; col < 8; col++) {
+
+                let square = document.createElement("div");
+
+                square.classList.add("square");
+
+                if ((row + col) % 2 === 0) {
+                    square.style.backgroundColor = "white";
+                }
+                else {
+                    square.style.backgroundColor = "black";
+                }
+
+                board.appendChild(square);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
