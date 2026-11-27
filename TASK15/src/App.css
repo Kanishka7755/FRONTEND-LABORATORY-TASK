@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+
+nav {
+  background-color: darkblue;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+.page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.page h1 {
+  color: darkblue;
+  font-size: 32px;
+}
+
+.page p {
+  font-size: 18px;
+  color: #444;
+}
+
+.blog-card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
